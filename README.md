@@ -1,0 +1,102 @@
+# MEOK MCP Hardening MCP
+
+> **Automated security red-team for ANY MCP server.** Maps the OWASP LLM Top 10 (2025) plus 5 MCP-specific risks to a 0-100 hardening score and an HMAC-signed report.
+
+> 🛡️ **Part of the MEOK Governance Substrate (£499/mo)** — combine with `mcp-spec-compliance-mcp` for spec-grade conformity AND security-grade hardening on every server you ship.
+
+## What it does
+
+Every MCP server you publish ends up loaded inside someone's agent loop. That makes the *manifest itself* an attack surface. This MCP reads any `server.json` (or live MCP descriptor) and returns a structured security report covering:
+
+| Category | What we check |
+|---|---|
+| **LLM01** Prompt injection | Instructional phrases in tool descriptions |
+| **LLM02** Insecure output | `eval` / `exec` / shell sinks |
+| **LLM05** Supply chain | Pinned versions, repo URL, provenance |
+| **LLM06** Secret disclosure | OpenAI / Anthropic / Stripe / GitHub / AWS / Slack keys in manifest |
+| **LLM07** Insecure plugin design | Missing name, over-broad tool surface |
+| **LLM08** Excessive agency | Destructive verbs (`delete`, `send`, `transfer`) without confirmation gate |
+| **LLM09** Overreliance | No license / homepage / metadata block |
+| **LLM10** Model theft | Public HTTP endpoint with no declared auth |
+| **MCP-S1** Tool-name spoofing | Non-ASCII characters / homoglyphs |
+| **MCP-S2** Roundtrip-input echoing | Untrusted-data sinks back to description |
+| **MCP-S3** Resource URI integrity | Plain `http://` resources |
+| **MCP-S4** Privilege exposure | `admin_*` / `sudo_*` tools on public surface |
+| **MCP-S5** Long-running tool gating | No cancel signal documented |
+
+## Quick start
+
+```bash
+pip install meok-mcp-hardening-mcp
+# or run with uvx (no install)
+uvx meok-mcp-hardening-mcp
+```
+
+```python
+from server import audit
+report = audit(your_server_json)
+print(report.score(), report.grade())  # e.g. 87 "B"
+```
+
+## Tools exposed
+
+- `audit_server_json(server_json)` — full report
+- `audit_tool_description(tool)` — one-tool deep scan
+- `check_destructive_surface(server_json)` — just LLM08 findings (CI gate)
+- `check_supply_chain(server_json)` — just LLM05 findings
+- `list_owasp_findings()` — rule map reference
+- `generate_hardened_template()` — passing-score starter manifest
+- `sign_security_report(audit_result)` — HMAC-seal for public verify
+
+## Scoring
+
+Start at 100, subtract:
+- 25 per **critical** finding
+- 15 per **high**
+- 8 per **medium**
+- 3 per **low**
+
+Grade: A ≥ 90 · B ≥ 80 · C ≥ 70 · D ≥ 60 · F otherwise.
+
+## Verify any signed report
+
+Every signed report carries an HMAC tag. Verify at <https://meok.ai/verify>.
+
+## Why this exists
+
+Every MCP author publishing to the Anthropic Registry, Smithery, Glama, or Awesome-MCP needs a clean security review. Every MCP *consumer* (Claude Desktop, Cursor, Windsurf) wants to verify what they're loading. This MCP is the seatbelt — free MIT, scriptable, signable.
+
+## Wire it up
+
+```jsonc
+// .mcp.json
+{
+  "mcpServers": {
+    "meok-mcp-hardening": {
+      "command": "uvx",
+      "args": ["meok-mcp-hardening-mcp"]
+    }
+  }
+}
+```
+
+## Pricing
+
+- Self-host: free (MIT)
+- Starter: £29/mo — 1K hardening audits/month, signed report SLA
+- Pro: £79/mo — 10K audits/month, branded badge, public verify URL
+- Governance Substrate: £499/mo — bundled with 10 governance MCPs
+- A2A Substrate: £999/mo — bundled with all 12 A2A MCPs + attestation chain
+
+## Companion MCPs
+
+- `mcp-spec-compliance-mcp` — schema conformity audit
+- `meok-mcp-cardgen-mcp` — generate `.well-known/mcp` card
+- `agent-prompt-injection-firewall-mcp` — runtime injection defence
+- `meok-aaif-agent-card-mcp` — AAIF agent identity
+
+## Legal
+
+Built by [MEOK AI Labs](https://meok.ai) — trading name of CSOAI LTD, UK Companies House 16939677.
+Founder: Nicholas Templeman (`nicholas@meok.ai`).
+License: MIT.

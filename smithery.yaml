@@ -1,0 +1,17 @@
+name: meok-mcp-hardening-mcp
+description: "MEOK MCP Hardening MCP — automated security red-team for any MCP server. OWASP LLM Top 10 (2025) + 5 MCP-specific risks → 0-100 score + HMAC-signed report."
+version: 1.0.0
+author: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/meok-mcp-hardening-mcp
+license: MIT
+categories:
+  - security
+  - ai
+  - governance
+
+build:
+  type: python
+  entrypoint: server.py
+  dependencies:
+    - mcp
