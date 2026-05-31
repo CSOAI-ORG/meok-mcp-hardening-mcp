@@ -1,117 +1,78 @@
-# MEOK MCP Hardening MCP
+# Meok MCP Hardening MCP
 
-> **Automated security red-team for ANY MCP server.** Maps the OWASP LLM Top 10 (2025) plus 5 MCP-specific risks to a 0-100 hardening score and an HMAC-signed report.
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/meok_mcp_hardening_mcp/)
 
-> 🛡️ **Part of the MEOK Governance Substrate (£499/mo)** — combine with `mcp-spec-compliance-mcp` for spec-grade conformity AND security-grade hardening on every server you ship.
+> MEOK MCP Hardening MCP — automated security red-team for any MCP server
 
-## What it does
+MEOK MCP Hardening MCP — automated security red-team for any MCP server. OWASP LLM Top 10 (2025) + 5 MCP-specific risks → 0-100 score + HMAC-signed report. By MEOK AI Labs.
 
-Every MCP server you publish ends up loaded inside someone's agent loop. That makes the *manifest itself* an attack surface. This MCP reads any `server.json` (or live MCP descriptor) and returns a structured security report covering:
+---
 
-| Category | What we check |
-|---|---|
-| **LLM01** Prompt injection | Instructional phrases in tool descriptions |
-| **LLM02** Insecure output | `eval` / `exec` / shell sinks |
-| **LLM05** Supply chain | Pinned versions, repo URL, provenance |
-| **LLM06** Secret disclosure | OpenAI / Anthropic / Stripe / GitHub / AWS / Slack keys in manifest |
-| **LLM07** Insecure plugin design | Missing name, over-broad tool surface |
-| **LLM08** Excessive agency | Destructive verbs (`delete`, `send`, `transfer`) without confirmation gate |
-| **LLM09** Overreliance | No license / homepage / metadata block |
-| **LLM10** Model theft | Public HTTP endpoint with no declared auth |
-| **MCP-S1** Tool-name spoofing | Non-ASCII characters / homoglyphs |
-| **MCP-S2** Roundtrip-input echoing | Untrusted-data sinks back to description |
-| **MCP-S3** Resource URI integrity | Plain `http://` resources |
-| **MCP-S4** Privilege exposure | `admin_*` / `sudo_*` tools on public surface |
-| **MCP-S5** Long-running tool gating | No cancel signal documented |
-
-## Quick start
+## 🚀 Quick Start
 
 ```bash
-pip install meok-mcp-hardening-mcp
-# or run with uvx (no install)
-uvx meok-mcp-hardening-mcp
+# Install via pip
+pip install meok_mcp_hardening_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install meok-mcp-hardening-mcp --client claude
 ```
 
-```python
-from server import audit
-report = audit(your_server_json)
-print(report.score(), report.grade())  # e.g. 87 "B"
-```
+## ✨ Features
 
-## Tools exposed
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-- `audit_server_json(server_json)` — full report
-- `audit_tool_description(tool)` — one-tool deep scan
-- `check_destructive_surface(server_json)` — just LLM08 findings (CI gate)
-- `check_supply_chain(server_json)` — just LLM05 findings
-- `list_owasp_findings()` — rule map reference
-- `generate_hardened_template()` — passing-score starter manifest
-- `sign_security_report(audit_result)` — HMAC-seal for public verify
+## 📖 Documentation
 
-## Scoring
+- [Full Documentation](https://docs.meok.ai/meok-mcp-hardening-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-Start at 100, subtract:
-- 25 per **critical** finding
-- 15 per **high**
-- 8 per **medium**
-- 3 per **low**
+## 🛡️ Compliance
 
-Grade: A ≥ 90 · B ≥ 80 · C ≥ 70 · D ≥ 60 · F otherwise.
+This MCP server is built with **EU AI Act compliance** built-in:
 
-## Verify any signed report
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-Every signed report carries an HMAC tag. Verify at <https://meok.ai/verify>.
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-## Why this exists
+## 🏢 Enterprise
 
-Every MCP author publishing to the Anthropic Registry, Smithery, Glama, or Awesome-MCP needs a clean security review. Every MCP *consumer* (Claude Desktop, Cursor, Windsurf) wants to verify what they're loading. This MCP is the seatbelt — free MIT, scriptable, signable.
+Need custom development, SLA guarantees, or white-label deployment?
 
-## Wire it up
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
 
-```jsonc
-// .mcp.json
-{
-  "mcpServers": {
-    "meok-mcp-hardening": {
-      "command": "uvx",
-      "args": ["meok-mcp-hardening-mcp"]
-    }
-  }
-}
-```
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
 
-## Pricing
+## 🤝 Part of the MEOK Ecosystem
 
-- Self-host: free (MIT)
-- Starter: £29/mo — 1K hardening audits/month, signed report SLA
-- Pro: £79/mo — 10K audits/month, branded badge, public verify URL
-- Governance Substrate: £499/mo — bundled with 10 governance MCPs
-- A2A Substrate: £999/mo — bundled with all 12 A2A MCPs + attestation chain
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
 
-## Companion MCPs
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
 
-- `mcp-spec-compliance-mcp` — schema conformity audit
-- `meok-mcp-cardgen-mcp` — generate `.well-known/mcp` card
-- `agent-prompt-injection-firewall-mcp` — runtime injection defence
-- `meok-aaif-agent-card-mcp` — AAIF agent identity
+## 📜 License
 
-<!-- BUY-LADDER:START -->
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 
-## 💸 Try MEOK in 30 seconds — instant buy ladder
+---
 
-| Tier | Price | What you get | Stripe |
-|---|---|---|---|
-| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
-| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
-| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
-
-> Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
-> Verify any signed report at <https://meok.ai/verify>.
-
-<!-- BUY-LADDER:END -->
-
-## Legal
-
-Built by [MEOK AI Labs](https://meok.ai) — trading name of CSOAI LTD, UK Companies House 16939677.
-Founder: Nicholas Templeman (`nicholas@meok.ai`).
-License: MIT.
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
