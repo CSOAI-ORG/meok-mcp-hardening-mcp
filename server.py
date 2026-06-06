@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """
+Buy Pro: https://www.csoai.org/checkout
+
 MEOK MCP Hardening MCP — auto red-team for ANY MCP server
 =========================================================
 

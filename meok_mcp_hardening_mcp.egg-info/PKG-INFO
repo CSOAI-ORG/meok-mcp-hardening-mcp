@@ -18,6 +18,8 @@ License-File: LICENSE
 Requires-Dist: mcp[cli]>=1.3.0
 Dynamic: license-file
 
+mcp-name: io.github.CSOAI-ORG/meok-mcp-hardening-mcp
+
 # MEOK MCP Hardening MCP
 
 > **Automated security red-team for ANY MCP server.** Maps the OWASP LLM Top 10 (2025) plus 5 MCP-specific risks to a 0-100 hardening score and an HMAC-signed report.
@@ -114,6 +116,21 @@ Every MCP author publishing to the Anthropic Registry, Smithery, Glama, or Aweso
 - `meok-mcp-cardgen-mcp` — generate `.well-known/mcp` card
 - `agent-prompt-injection-firewall-mcp` — runtime injection defence
 - `meok-aaif-agent-card-mcp` — AAIF agent identity
+
+<!-- BUY-LADDER:START -->
+
+## 💸 Try MEOK in 30 seconds — instant buy ladder
+
+| Tier | Price | What you get | Stripe |
+|---|---|---|---|
+| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
+| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
+| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
+
+> Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
+> Verify any signed report at <https://meok.ai/verify>.
+
+<!-- BUY-LADDER:END -->
 
 ## Legal
 
