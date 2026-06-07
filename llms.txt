@@ -1,0 +1,23 @@
+# meok-mcp-hardening-mcp
+
+> MEOK MCP Hardening MCP — automated security red-team for any MCP server. Maps OWASP LLM Top 10 (2025) + 5 MCP-specific risks to a 0-100 hardening score with HMAC-signed reports. By MEOK AI Labs.
+
+MCP server by MEOK AI Labs. Framework: fastmcp. Transport: stdio.
+
+## Tools
+- audit_server_json
+- audit_tool_description
+- check_destructive_surface
+- check_supply_chain
+- list_owasp_findings
+- generate_hardened_template
+- sign_security_report
+
+## Install
+```
+pip install meok-mcp-hardening-mcp
+```
+
+## Links
+- PyPI: https://pypi.org/project/meok-mcp-hardening-mcp/
+- Docs: https://meok.ai

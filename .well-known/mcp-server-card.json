@@ -1,0 +1,34 @@
+{
+  "name": "meok-mcp-hardening-mcp",
+  "title": "Meok Mcp Hardening Mcp",
+  "description": "MEOK MCP Hardening MCP \u2014 automated security red-team for any MCP server. Maps OWASP LLM Top 10 (2025) + 5 MCP-specific risks to a 0-100 hardening score with HMAC-signed reports. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "audit_server_json"
+    },
+    {
+      "name": "audit_tool_description"
+    },
+    {
+      "name": "check_destructive_surface"
+    },
+    {
+      "name": "check_supply_chain"
+    },
+    {
+      "name": "list_owasp_findings"
+    },
+    {
+      "name": "generate_hardened_template"
+    },
+    {
+      "name": "sign_security_report"
+    }
+  ]
+}
