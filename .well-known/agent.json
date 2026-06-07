@@ -1,0 +1,86 @@
+{
+  "name": "meok-mcp-hardening-mcp",
+  "description": "MEOK MCP Hardening MCP \u2014 automated security red-team for any MCP server. Maps OWASP LLM Top 10",
+  "url": "https://proofof.ai/scorecard/meok-mcp-hardening-mcp.html",
+  "version": "1.0.0",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "audit_server_json",
+      "name": "Audit Server Json",
+      "description": "audit_server_json via meok-mcp-hardening-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "audit_tool_description",
+      "name": "Audit Tool Description",
+      "description": "audit_tool_description via meok-mcp-hardening-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_destructive_surface",
+      "name": "Check Destructive Surface",
+      "description": "check_destructive_surface via meok-mcp-hardening-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_supply_chain",
+      "name": "Check Supply Chain",
+      "description": "check_supply_chain via meok-mcp-hardening-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "list_owasp_findings",
+      "name": "List Owasp Findings",
+      "description": "list_owasp_findings via meok-mcp-hardening-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_hardened_template",
+      "name": "Generate Hardened Template",
+      "description": "generate_hardened_template via meok-mcp-hardening-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "sign_security_report",
+      "name": "Sign Security Report",
+      "description": "sign_security_report via meok-mcp-hardening-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

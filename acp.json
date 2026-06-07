@@ -1,0 +1,25 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "meok-mcp-hardening-mcp",
+    "description": "MEOK MCP Hardening MCP \u2014 automated security red-team for any MCP server. Maps OWASP LLM Top 10",
+    "version": "1.0.0",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "meok-mcp-hardening-mcp"
+      }
+    ],
+    "capabilities": [
+      "audit_server_json",
+      "audit_tool_description",
+      "check_destructive_surface",
+      "check_supply_chain",
+      "list_owasp_findings",
+      "generate_hardened_template",
+      "sign_security_report"
+    ]
+  }
+}
