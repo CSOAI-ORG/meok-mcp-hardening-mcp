@@ -1,4 +1,22 @@
-[![MCP Scorecard: 83/100](https://img.shields.io/badge/proofof.ai-83%2F100-5b21b6)](https://proofof.ai/scorecard/meok-mcp-hardening-mcp.html)
+Metadata-Version: 2.4
+Name: meok-mcp-hardening-mcp
+Version: 1.0.0
+Summary: MEOK MCP Hardening MCP — automated security red-team for any MCP server. Maps OWASP LLM Top 10 (2025) + 5 MCP-specific risks to a 0-100 hardening score with HMAC-signed reports. By MEOK AI Labs.
+Author-email: Nicholas Templeman <nicholas@meok.ai>
+License: MIT
+Project-URL: Homepage, https://meok.ai/docs
+Project-URL: Repository, https://github.com/CSOAI-ORG/meok-mcp-hardening-mcp
+Keywords: mcp,security,owasp-llm,red-team,hardening,audit,meok
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: mcp[cli]>=1.3.0
+Dynamic: license-file
 
 # Meok MCP Hardening MCP
 mcp-name: io.github.CSOAI-ORG/meok-mcp-hardening-mcp

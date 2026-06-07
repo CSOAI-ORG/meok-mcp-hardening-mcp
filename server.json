@@ -2,8 +2,27 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.CSOAI-ORG/meok-mcp-hardening-mcp",
   "version": "1.0.0",
-  "description": "MEOK MCP Hardening MCP — automated security red-team for any MCP server. Maps OWASP LLM Top 10 (2025) + 5 MCP-specific risks to a 0-100 hardening score with HMAC-signed reports. By MEOK AI Labs.",
-  "repository": { "url": "https://github.com/CSOAI-ORG/meok-mcp-hardening-mcp", "source": "github" },
-  "packages": [{ "registryType": "pypi", "identifier": "meok-mcp-hardening-mcp", "version": "1.0.0", "runtimeHint": "python", "transport": { "type": "stdio" } }],
-  "remotes": [{ "type": "streamable-http", "url": "https://api.meok.ai/v1/dev/meok-mcp-hardening", "auth": "bearer" }]
+  "description": "MEOK MCP Hardening MCP \u2014 automated security red-team for any MCP server. Maps OWASP LLM Top 10",
+  "repository": {
+    "url": "https://github.com/CSOAI-ORG/meok-mcp-hardening-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "meok-mcp-hardening-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "python",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.meok.ai/v1/dev/meok-mcp-hardening",
+      "auth": "bearer"
+    }
+  ]
 }
