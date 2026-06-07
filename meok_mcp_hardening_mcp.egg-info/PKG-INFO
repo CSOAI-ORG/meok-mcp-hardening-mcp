@@ -18,6 +18,9 @@ License-File: LICENSE
 Requires-Dist: mcp[cli]>=1.3.0
 Dynamic: license-file
 
+<!-- mcp-name: io.github.CSOAI-ORG/meok-mcp-hardening-mcp -->
+[![MCP Scorecard: 83/100](https://img.shields.io/badge/proofof.ai-83%2F100-5b21b6)](https://proofof.ai/scorecard/meok-mcp-hardening-mcp.html)
+
 # Meok MCP Hardening MCP
 mcp-name: io.github.CSOAI-ORG/meok-mcp-hardening-mcp
 
