@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "meok-mcp-hardening-mcp": {
+      "command": "uvx",
+      "args": [
+        "meok-mcp-hardening-mcp"
+      ]
+    }
+  }
+}
