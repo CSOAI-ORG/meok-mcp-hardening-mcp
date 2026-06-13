@@ -1,0 +1,144 @@
+{
+  "name": "Meok Mcp Hardening Mcp",
+  "version": "1.0.0",
+  "url": "https://mcp.meok.ai/meok-mcp-hardening-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "MEOK MCP Hardening MCP — automated security red-team for any MCP server. Maps OWASP LLM Top 10 (2025) + 5 MCP-specific risks to a 0-100 hardening score with HMAC-signed reports. By MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "audit_server_json",
+      "name": "Audit Server Json",
+      "description": "Audit Server Json — a tool of the meok-mcp-hardening-mcp MCP.",
+      "tags": [
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "audit_tool_description",
+      "name": "Audit Tool Description",
+      "description": "Audit Tool Description — a tool of the meok-mcp-hardening-mcp MCP.",
+      "tags": [
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_destructive_surface",
+      "name": "Check Destructive Surface",
+      "description": "Check Destructive Surface — a tool of the meok-mcp-hardening-mcp MCP.",
+      "tags": [
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_supply_chain",
+      "name": "Check Supply Chain",
+      "description": "Check Supply Chain — a tool of the meok-mcp-hardening-mcp MCP.",
+      "tags": [
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "list_owasp_findings",
+      "name": "List Owasp Findings",
+      "description": "List Owasp Findings — a tool of the meok-mcp-hardening-mcp MCP.",
+      "tags": [
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "generate_hardened_template",
+      "name": "Generate Hardened Template",
+      "description": "Generate Hardened Template — a tool of the meok-mcp-hardening-mcp MCP.",
+      "tags": [
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "sign_security_report",
+      "name": "Sign Security Report",
+      "description": "Sign Security Report — a tool of the meok-mcp-hardening-mcp MCP.",
+      "tags": [
+        "security"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "meok-mcp-hardening-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "meok-mcp-hardening-mcp"
-version = "1.0.0"
+version = "1.0.1"
 description = "MEOK MCP Hardening MCP — automated security red-team for any MCP server. Maps OWASP LLM Top 10 (2025) + 5 MCP-specific risks to a 0-100 hardening score with HMAC-signed reports. By MEOK AI Labs."
 readme = "README.md"
 license = { text = "MIT" }

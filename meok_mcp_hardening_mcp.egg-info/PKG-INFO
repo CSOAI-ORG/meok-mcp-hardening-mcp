@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: meok-mcp-hardening-mcp
-Version: 1.0.0
+Version: 1.0.1
 Summary: MEOK MCP Hardening MCP — automated security red-team for any MCP server. Maps OWASP LLM Top 10 (2025) + 5 MCP-specific risks to a 0-100 hardening score with HMAC-signed reports. By MEOK AI Labs.
 Author-email: Nicholas Templeman <nicholas@meok.ai>
 License: MIT
@@ -104,9 +104,9 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 </p>
 | Tier | Price | What you get | Stripe |
 |---|---|---|---|
-| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
-| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
-| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
+| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t> |
+| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t> |
+| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t> |
 
 > Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
 > Verify any signed report at <https://meok.ai/verify>.
